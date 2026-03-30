@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { ChevronLeft, Send, ImageIcon, X, MessageCircle } from 'lucide-react';
@@ -14,7 +14,7 @@ import { EmptyState, ErrorState, Spinner } from '@/components/ui';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
 
-export default function ChatPage() {
+function ChatPageInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const taskId = searchParams.get('task');
@@ -220,5 +220,19 @@ export default function ChatPage() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function ChatPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center h-screen">
+          <Spinner />
+        </div>
+      }
+    >
+      <ChatPageInner />
+    </Suspense>
   );
 }
