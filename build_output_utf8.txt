@@ -1,0 +1,100 @@
+﻿
+> amjuulya@1.0.0 build
+> next build
+
+  Γû▓ Next.js 14.2.3
+
+   Creating an optimized production build ...
+node.exe : <w> [webpack
+.cache.PackFileCacheStr
+ategy] Serializing big 
+strings (215kiB) 
+impacts 
+deserialization 
+performance (consider 
+using Buffer instead 
+and decode when needed)
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo 
+...
++ ~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~
+    + CategoryInfo     
+         : 
+NotSpecified:     (<w> 
+[webpack.ca...d    e 
+when needed):Strin    
+g) [], RemoteExcepti   
+ on
+    + 
+FullyQualifiedErro    
+rId : NativeCommandE   
+ rror
+ 
+ Γ£ô Compiled successfully
+   Linting and checking validity of types ...
+Failed to compile.
+
+./src/lib/api.ts:46:61
+Type error: Argument 
+of type 
+'Partial<Pick<User, 
+"name" | 
+"avatar_url">>' is not 
+assignable to 
+parameter of type 
+'never'.
+
+[0m [90m 44 |[39m   
+}[33m,[39m[0m
+[0m [90m 45 |[39m   
+[36masync[39m 
+update(id[33m:[39m 
+string[33m,[39m 
+updates[33m:[39m [33
+mPartial[39m[33m<[39
+m[33mPick[39m[33m<[
+39m[33mUser[39m[33m,
+[39m [32m'name'[39m 
+[33m|[39m [32m'avata
+r_url'[39m[33m>>[39m
+) {[0m
+[0m[31m[1m>[22m[39
+m[90m 46 |[39m     
+[36mconst[39m { 
+error } [33m=[39m 
+[36mawait[39m supabas
+e()[33m.[39m[36mfrom
+[39m([32m'users'[39m
+)[33m.[39mupdate(upda
+tes)[33m.[39meq([32m
+'id'[39m[33m,[39m 
+id)[33m;[39m[0m
+[0m [90m    |[39m   
+                       
+                       
+            [31m[1m^
+[22m[39m[0m
+[0m [90m 47 |[39m   
+  [36mif[39m (error) 
+throwIf(error[33m,[39
+m [32m'╨ƒ╤Ç╨╛╤ä╨░╨╣╨╗ 
+╤ê╨╕╨╜╤ì╤ç╨╗╤ì╤à╤ì╨┤ 
+╨░╨╗╨┤╨░╨░ ╨│╨░╤Ç╨╗╨░╨░
+'[39m)[33m;[39m[0m
+[0m [90m 48 |[39m   
+}[33m,[39m[0m
+[0m [90m 49 |[39m   
+[36masync[39m uploadA
+vatar(userId[33m:[39m
+ string[33m,[39m 
+file[33m:[39m [33mFi
+le[39m)[33m:[39m [3
+3mPromise[39m[33m<[3
+9m[33mstring[39m[33m
+>[39m {[0m
