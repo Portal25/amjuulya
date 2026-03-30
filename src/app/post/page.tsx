@@ -14,7 +14,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 type FormErrors = Partial<
-  Record<'title' | 'description' | 'category' | 'price' | 'balance', string>
+  Record<
+    'title' | 'description' | 'category' | 'price' | 'balance' | 'location',
+    string
+  >
 >;
 
 export default function PostTaskPage() {

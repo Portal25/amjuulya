@@ -64,12 +64,12 @@ export default function ProfilePage() {
         setTaskStats((prev) => ({
           ...prev,
           posted: t.length,
-          completed: t.filter((x) => x.status === 'completed').length,
+          completed: t.filter((x: any) => x.status === 'completed').length,
         }));
       if (tx)
         setTaskStats((prev) => ({
           ...prev,
-          earned: tx.reduce((s, x) => s + x.amount, 0),
+          earned: tx.reduce((s: number, x: any) => s + x.amount, 0),
         }));
     });
   }, [user, router]);
